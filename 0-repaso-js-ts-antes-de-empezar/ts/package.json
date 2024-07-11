@@ -1,0 +1,22 @@
+{
+  "name": "typescript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start:ori": "tsc index.ts && node index.js",
+    "start:types": "tsc src/01types.ts --outdir dist/ && node dist/01types.js",
+    "start:enums": "tsc src/02enums.ts --outdir dist/ && node dist/02enums.js",
+    "start:interfaces": "tsc src/03interfaces.ts --outdir dist/ && node dist/03interfaces.js",
+    "start:customTypes": "tsc src/04customTypes.ts --outdir dist/ && node dist/04customTypes.js",
+    "start:classes": "tsc src/06classes.ts --outdir dist/ && node dist/06classes.js",
+    "start:functions": "tsc src/08functions.ts --outdir dist/ && node dist/08functions.js",
+    "start:namespace": "tsc advanced/namespaces/namespaces.ts --outfile dist/namespace.js && node dist/namespace.js",
+    "start:namespaces": "tsc advanced/namespaces/namespaces.ts advanced/namespaces/index.ts --outfile dist/namespaces.js && node dist/namespaces.js",
+    "start:modules": "tsc advanced/modules/index.ts --outdir dist/modules.js && node dist/modules.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

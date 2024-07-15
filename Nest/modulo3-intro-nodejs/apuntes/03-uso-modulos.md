@@ -1,7 +1,7 @@
 ## USO DE MÓDULOS
 Se suelen importar los módulos completos, se importan como objetos por lo tanto se mandan a llamar con la notación del punto.
 
-Se podría importar solo una función, pero por convención se importa completo.
+Se podría importar solo un método, pero por convención (y por legibilidad y consistencia de la sintaxis, supongo) se importa completo.
 Ejemplo: const {add} = require('./modules/math');
 
 # NODE - CORE

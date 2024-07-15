@@ -1,5 +1,7 @@
 📝 Aquí están todos mis apuntes y proyectos que he realizado mintras cursaba el bootcamp de Código Facilito [Javascript en el Backend](https://codigofacilito.com/programas/javascript-backend) con NestJS.
 
+Javascript || Typescript || NodeJS || NestJS || API RESTful || 
+
 ## Datos del bootcamp
 
 ### Perfil de ingreso

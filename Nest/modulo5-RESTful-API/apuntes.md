@@ -11,3 +11,12 @@ Extensión de navegador -> JSON formatter
   - POST
   - PUT
   - DELETE
+
+
+Cliente - Controller - Service
+
+Flujo
+Cliente - navegador solicita al servidor info
+Controller - entrada a nuestro servidor, recibe la petición del cliente y busca los servicios a los que solicitar la info
+Service - Reciben la petición del controller y devuelven la info
+Controller - Recibe toda la info de los distintos servicios, los junta y los manda al cliente.

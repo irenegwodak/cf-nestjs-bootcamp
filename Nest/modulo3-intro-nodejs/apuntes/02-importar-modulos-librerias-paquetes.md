@@ -7,7 +7,7 @@ Se pueden importar tres tipos de módulos-librerías-paquetes:
 Después de instalar las dependencias, se importa llamando al nombre:
 > const lodash = require('lodash');
 
-## MÓDULOS LOCALES - CREADOS EN ARCHIVOS LOCALES AL PROYECTO
+## MÓDULOS LOCALES - QUSTOM MODULES - CREADOS EN ARCHIVOS LOCALES AL PROYECTO
 Después de crear el archivo, se importa señalando la dirección del archivo, no es necesaria la extensión:
 > const math = require('./modules/math');
 

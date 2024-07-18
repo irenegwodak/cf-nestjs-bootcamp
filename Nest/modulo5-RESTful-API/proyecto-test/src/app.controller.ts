@@ -10,6 +10,10 @@ export class AppController {
     return this.appService.getHello();
   }
 
+  @Get('/api/item')
+  getItem(@Query('id') item): any {
+    return item;
+  }
   @Get('/api/items')
   getItems(@Query() queries): any {
     return queries;

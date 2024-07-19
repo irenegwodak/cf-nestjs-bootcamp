@@ -1,0 +1,1 @@
+https://docs.nestjs.com/exception-filters#built-in-http-exceptions

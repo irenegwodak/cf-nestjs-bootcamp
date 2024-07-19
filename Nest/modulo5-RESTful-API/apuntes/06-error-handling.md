@@ -10,3 +10,17 @@ addUser(@Body() inputData: any): object[] {
     }
 }
 ```
+
+```js
+// forma 1
+if (!inputData?.name || !inputData?.surname || !inputData?.age) {
+    throw new BadRequestException('Invalid data');
+}
+```
+```js
+// destructuring
+const { name, surname, age } = inputData;
+if (!name || !surname || !age) {
+    throw new BadRequestException('Invalid data');
+}
+```

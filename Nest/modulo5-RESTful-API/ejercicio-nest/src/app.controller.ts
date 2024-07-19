@@ -38,17 +38,17 @@ export class AppController {
   }
 
   @Post('/api/users')
-  addUser(@Body() inputData: any): object[] {
-    if (!inputData?.name || !inputData?.surname || !inputData?.age) {
+  addUser(@Body() inputData: any): object {
+    const { name, surname, age } = inputData;
+    if (!name || !surname || !age) {
       throw new BadRequestException('Invalid data');
     }
 
     const lastUser = this.users[this.users.length - 1];
-    const lastId = lastUser['id'];
-    const newUserData = { id: lastId + 1, ...inputData };
-
+    const newId = lastUser.id + 1;
+    const newUserData = { id: newId, ...inputData };
     this.users.push(newUserData);
 
-    return this.users;
+    return { message: 'User created Successfully' };
   }
 }

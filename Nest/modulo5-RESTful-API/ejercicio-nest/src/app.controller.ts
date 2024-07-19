@@ -1,4 +1,11 @@
-import { Body, Controller, Get, Param, Post } from '@nestjs/common';
+import {
+  BadRequestException,
+  Body,
+  Controller,
+  Get,
+  Param,
+  Post,
+} from '@nestjs/common';
 import { AppService } from './app.service';
 
 @Controller()
@@ -31,7 +38,11 @@ export class AppController {
   }
 
   @Post('/api/users')
-  addUser(@Body() inputData: object): any {
+  addUser(@Body() inputData: any): object[] {
+    if (!inputData?.name || !inputData?.surname || !inputData?.age) {
+      throw new BadRequestException('Invalid data');
+    }
+
     const lastUser = this.users[this.users.length - 1];
     const lastId = lastUser['id'];
     const newUserData = { id: lastId + 1, ...inputData };

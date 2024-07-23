@@ -1,5 +1,6 @@
 import { Body, Controller, Get, Param, Post, Query } from '@nestjs/common';
 import { AppService } from './app.service';
+import { firstValueFrom } from 'rxjs';
 
 @Controller()
 export class AppController {
@@ -45,5 +46,18 @@ export class AppController {
   addUsers(@Body() userData: object): object {
     // this.users.push(userData);
     return userData;
+  }
+
+  @Get('api/pokemon/')
+  getPokemonLog(): any {
+    console.log(this.appService.getPokemonByName('ditto'));
+  }
+
+  @Get('api/pokemon/:name')
+  async getPokemon(@Param('name') pokemon): Promise<any> {
+    const { data } = await firstValueFrom(
+      this.appService.getPokemonByName(pokemon),
+    );
+    return data;
   }
 }

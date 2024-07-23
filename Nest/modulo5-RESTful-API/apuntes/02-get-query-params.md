@@ -12,6 +12,7 @@ Estas se recuperan a través de un objeto.
 getItems(@Query('queri1') variableName1, @Query('queri2') variableName2): any {
 }
 ```
+
 ```js
 @Get('ruta')
 getItems(@Query('CLAVEdelQueryQueQueremos') VARIABLEcustom_DondeSeGuardaVALORdelQuery): any {
